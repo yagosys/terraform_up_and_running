@@ -1,3 +1,8 @@
+variable region {
+type = string
+default = "ap-east-1"
+}
+
 data "aws_vpc" "default" {
   default = true
 }
@@ -32,3 +37,6 @@ output "dynamodb_table_name" {
   description = "The name of the DynamoDB table"
 }
 
+output "aws_securityhub_product_subscription" {
+ value = aws_securityhub_product_subscription.example
+}
