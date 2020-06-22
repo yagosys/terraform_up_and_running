@@ -1,0 +1,7 @@
+follow the step
+
+1. create S3 object first
+2. create dynamoDB
+3. create backend to use S3 and dynamoDB
+
+
