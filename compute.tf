@@ -3,8 +3,13 @@ variable server_port {
   default = 8080
 }
 
+variable "user_specified_ami" {
+ default = "ami-c790d6b6"
+}
+
 resource "aws_instance" "example" {
-  ami           = "ami-c790d6b6"
+  ami           = var.user_specified_ami
+
   instance_type = "t3.micro"
   vpc_security_group_ids = [aws_security_group.instance.id]
   user_data = <<-EOF
